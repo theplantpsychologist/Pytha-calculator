@@ -239,6 +239,9 @@ def ridge():
 
 #canvas2.mainloop()
 def show_solution1():
+    if y-flap2 >= flap1:
+        print("no pytha necessary")
+        pass
     overlap()
     if bx==ax:
         print("no pytha necessary")
@@ -275,6 +278,8 @@ def next_solution():
             factor1 = combos[solution][1]
             factor2 = area/factor1
     canvas2.delete("all")
+    canvas2.create_rectangle(0,00,600,600,fill="white",outline="white")
+
     draw_grid(x,y,grid)
     draw_circles(x,y,grid,flap1,flap2)
     draw_boxes(x,y,grid,flap1,flap2)
@@ -289,6 +294,7 @@ def next_solution():
     
 def hide_solution():
     canvas2.delete('all')
+    canvas2.create_rectangle(0,00,600,600,fill="white",outline="white")
     draw_grid(x,y,grid)
     draw_circles(x,y,grid,flap1,flap2)
     draw_boxes(x,y,grid,flap1,flap2)
