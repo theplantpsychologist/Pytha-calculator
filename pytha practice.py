@@ -214,6 +214,15 @@ def cd1():
     while a2x >= cx:
         a2y+=1
         a2x-=1
+    if abs(cx-dx)>x or abs(cy-dy)>y:
+        global solution
+        if nicecombos != []:
+            del(nicecombos[solution])
+        else:
+            del(combos[solution])
+        solution = 0
+        next_solution()
+        
     
 
 def parallelogram():
